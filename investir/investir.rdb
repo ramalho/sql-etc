@@ -1,0 +1,60 @@
+@cliente(cod_contribuinte/char,nome/char,endereco/char):cod_contribuinte
+'1','Cliente Um','Rua Um, 11'
+'2','Cliente Dois','Av. Dois, 22'
+'3','Cliente Três','Rua Três, 33'
+'4','Cliente Quatro','Av. Quatro, 44'
+'5','Cliente Cinco','Rua Cinco, 55'
+'6','Cliente Seis','Av. Seis, 66'
+'7','Cliente Sete','Rua Sete, 77'
+'8','Cliente Oito','Av. Oito, 88'
+
+@acao(simbolo/char,empresa/char,avaliacao/char,setor/char,cotacao_max/numeric,cotacao_min/numeric,cotacao/numeric,retorno_1a/numeric,retorno_5a/numeric):simbolo
+'ABC','A.B.C. S/A','N/A','entretenimento',50,14,23,12,15
+'DEF','D.E.F. S/A','N/A','alimentos',40,4,20,14,20
+'GHI','G.H.I. S/A','N/A','tecnologia',40,10,23,28,30
+'JKL','J.K.L. S/A','N/A','tecnologia',40,7,23,28,28
+'MNO','M.N.O. S/A','A','farmaceutica',15,4,10,19,15
+'PQR','P.Q.R. S/A','C','aviacao',20,4,15,9,12
+'STU','S.T.U. S/A','C','tecnologia',25,4,12,18,14
+'VWX','V.W.X. S/A','A','alimentos',30,14,23,10,11
+
+@familia_fundos(cod_familia/char,nome/char,endereco/char):cod_familia
+'F1','Ficcional','Av. Fictícia, 0'
+'F2','Imaginária','Rua Imaginária, -1'
+
+@fundo(simbolo/char,nome/char,objetivo/char,cota_max/numeric,cotacao_min/numeric,cotacao_max/numeric,lucro/numeric,cod_familia/char):simbolo
+'F1MF1','Blue Chip','C',20,15,17,2,'F1'
+'F1MF2','Capital','C',25,12,15,4,'F1'
+'F2MF1','Governo','C',49,12,12,4,'F2'
+'F2MF2','Global','R',49,12,15,4,'F2'
+'F2MF3','Ciência e Tecnologia','E',52,8,12,6,'F2'
+
+@carteira_fundos(cod_contribuinte/char,simbolo/char,cotas/numeric):cod_contribuinte,simbolo
+'1','F1MF1',150
+'1','F1MF2',230
+'1','F2MF3',290
+'2','F1MF1',58
+'2','F1MF2',280
+'2','F2MF1',180
+'2','F2MF3',45
+'3','F1MF1',190
+'3','F1MF2',180
+'4','F1MF1',190
+'4','F2MF2',190
+'7','F2MF2',190
+
+@carteira_acoes(cod_contribuinte/char,simbolo/char,cotas/numeric):cod_contribuinte,simbolo
+'1','ABC',130
+'1','DEF',110
+'1','GHI',130
+'1','STU',100
+'1','VWX',210
+'2','DEF',120
+'2','ABC',110
+'3','DEF',180
+'5','PQR',100
+'6','MNO',185
+'6','STU',190
+'6','VWX',25
+'8','MNO',50
+'8','GHI',190
