@@ -1,0 +1,61 @@
+@client(taxPayerID/char,name/char,address/char):taxPayerID
+'1','Client One','Address One'
+'2','Client Two','Address Two'
+'3','Client Three','Address Three'
+'4','Client Four','Address Four'
+'5','Client Five','Address Five'
+'6','Client Six','Address Six'
+'7','Client Seven','Address Seven'
+'8','Client Eight','Address Eight'
+
+@stock(sTicker/char,sName/char,rating/char,prinBus/char,sHigh/numeric,sLow/numeric,sCurrent/numeric,ret1Yr/numeric,ret5Yr/numeric):sTicker
+'ABC','Stock ABC','NR','Entertainment',50,14,23,12,15
+'DEF','Stock DEF','NR','Consumer',40,4,20,14,20
+'GHI','Stock GHI','NR','Technology',40,10,23,28,30
+'JKL','Stock JKL','NR','Technology',40,7,23,28,28
+'MNO','Stock MNO','A','Healthcare',15,4,10,19,15
+'PQR','Stock PQR','C','Global',20,4,15,9,12
+'STU','Stock STU','C','Technology',25,4,12,18,14
+'VWX','Stock VWX','A','Consumer',30,14,23,10,11
+
+@fundFamily(familyID/char,company/char,cAddress/char):familyID
+'F1','Fictitious','Fictitious Adddress'
+'F2','Imagination','Imagination Address'
+
+@mutualFund(mTicker/char,mName/char,prinObj/char,mHigh/numeric,mLow/numeric,mCurrent/numeric,yield/numeric,familyID/char):mTicker
+'F1MF1','Blue Chip','G',20,15,17,2,'F1'
+'F1MF2','Capital','G',25,12,15,4,'F1'
+'F2MF1','Government','G',49,12,12,4,'F2'
+'F2MF2','Overseas','I',49,12,15,4,'F2'
+'F2MF3','Science and Technology','S',52,8,12,6,'F2'
+
+@mutualFundPortfolio(taxPayerID/char,mTicker/char,mNumShares/numeric):taxPayerID,mTicker
+'1','F1MF1',150
+'1','F1MF2',230
+'1','F2MF3',290
+'2','F1MF1',58
+'2','F1MF2',280
+'2','F2MF1',180
+'2','F2MF3',45
+'3','F1MF1',190
+'3','F1MF2',180
+'4','F1MF1',190
+'4','F2MF2',190
+'7','F2MF2',190
+
+@stockPortfolio(taxPayerID/char,sTicker/char,sNumShares/numeric):taxPayerID,sTicker
+'1','ABC',130
+'1','DEF',110
+'1','GHI',130
+'1','STU',100
+'1','VWX',210
+'2','DEF',120
+'2','ABC',110
+'3','DEF',180
+'5','PQR',100
+'6','MNO',185
+'6','STU',190
+'6','VWX',25
+'8','MNO',50
+'8','GHI',190
+

@@ -1,0 +1,58 @@
+@employee(fname/char,minit/char,lname/char,ssn/char,bdate/char,address/char,sex/char,salary/numeric,superssn/char,dno/numeric):ssn
+'John','B','Smith','123456789','09-JAN-55','731 Fondren, Houston, TX','M',30000,'333445555',5
+'Franklin','T','Wong','333445555','08-DEC-45','638 Voss, Houston, TX','M',40000,'888665555',5
+'Alicia','J','Zelaya','999887777','19-JUN-58','3321 Castle, Spring TX','F',25000,'987654321',4
+'Jennifer','S','Wallace','987654321','20-JUN-31','291 Berry, Bellaire, TX','F',43000,'888665555',4
+'Ramesh','K','Narayan','666884444','15-SEP-52','975 Fire Oak, Humble, TX','M',38000,'333445555',5
+'Joyce','A','English','453453453','31-JUL-62','5631 Rice Houston, TX','F',25000,'333445555',5
+'Ahmad','V','Jabbar','987987987','29-MAR-59','980 Dallas, Houston, TX','M',25000,'987654321',4
+'James','E','Borg','888665555','10-NOV-27','450 Stone, Houston, TX','M',55000,'null',1
+
+@department(dname/char,dnumber/numeric,mgrssn/char,mgrstartdate/char):dnumber
+'Research',5,'333445555','22-MAY-78'
+'Administration',4,'987654321','01-JAN-85'
+'Headquarters',1,'888665555','19-JUN-71'
+
+@dept_locations(dnumber/numeric,dlocation/char):dnumber,dlocation
+1,'Houston'
+4,'Stafford'
+5,'Bellaire'
+5,'Sugarland'
+5,'Houston'
+
+@projects(pname/char,pnumber/numeric,plocation/char,dnum/numeric):pnumber
+'ProductX',1,'Bellaire',5
+'ProductY',2,'Sugarland',5
+'ProductZ',3,'Houston',5
+'Computerization',10,'Stafford',4
+'Reorganization',20,'Houston',1
+'Newbenefits',30,'Stafford',4
+
+@works_on(essn/char,pno/numeric,hours/numeric):essn,pno
+'123456789',1,32.500000000000000
+'123456789',2,7.500000000000000
+'666884444',3,40.000000000000000
+'453453453',1,20.000000000000000
+'453453453',2,20.000000000000000
+'333445555',2,10.000000000000000
+'333445555',3,10.000000000000000
+'333445555',10,10.000000000000000
+'333445555',20,10.000000000000000
+'999887777',30,30.000000000000000
+'999887777',10,10.000000000000000
+'987987987',10,35.000000000000000
+'987987987',30,5.000000000000000
+'987654321',30,20.000000000000000
+'987654321',20,15.000000000000000
+'888665555',20,0
+'123456789',3,15.000000000000000
+
+@dependent(essn/char,dependent_name/char,sex/char,bdate/char,relationship/char):essn,dependent_name
+'333445555','Alice','F','05-APR-76','DAUGHTER'
+'333445555','Theodore','M','25-OCT-73','SON'
+'333445555','Joy','F','03-MAY-48','SPOUSE'
+'987654321','Abner','M','29-FEB-32','SPOUSE'
+'123456789','Michael','M','01-JAN-78','SON'
+'123456789','Alice','F','31-DEC-78','DAUGHTER'
+'123456789','Elizabeth','F','05-MAY-57','SPOUSE'
+

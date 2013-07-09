@@ -1,0 +1,102 @@
+@homebuilder(hID/char,hName/char,hStreet/char,hCity/char,hZip/char,hPhone/char):hID
+'1','Homer','1000 E.Mohawk','Phoenix','82345','350-2123'
+'2','HBuilder2','300 E.Mitchell','Phoenix','82345','350-3453'
+'3','HBuilder3','500 E.Rising Sun','Glendale','72345','350-2123'
+'4','HBuilder4','700 E.Apache','Tempe','82545','350-3453'
+'5','HBuilder5','W.Southern','Tempe','82545','350-2124'
+'6','HBuilder6','1025 E.Lansing Rd.','Phoenix','76890','350-3421'
+'7','HBuilder7','965 Dorsey Rd.','Tempe','82545','966-2124'
+
+@lot(sName/char,lotNum/char,lStAddr/char,lSize/char,lPremium/char):sName,lotNum
+'Terraces','1','W.Camelback',5000,2000
+'Terraces','2','E.Camelback',3000,1000
+'Terraces','3','920 E.Grand Av',7000,1700
+'Terraces','4','520 E.Keating Av',6000,1700
+'Foothills','1','920 S.Main Street',9000,1500
+'Foothills','2','930 W.Keating Av',7000,1600
+'Foothills','5','92 W.Southern Av',6500,1800
+'Mountainview','2','1004 University Dr',8000,1600
+'Terraces','5','1900 Broadway Rd',2000,1700
+'Oceanside','1','1031 E.Lemon St',3000,1900
+'Lagoonside','1','500 W. Apache Blvd',2500,2000
+'Seaside','1','1000 Alameda Rd',2700,2500
+'Terraces','6','510 E.Camelback',6000,1900
+'Terraces','7','900 E.Lemon St',7000,4000
+'Waterside','1','200 Broadway Rd',2500,2000
+'Hillview','1','930 E.Keating Av',2500,2000
+'Hillview','2','1000 E.University Dr',2000,1700
+'Goldwater','1','930 W.University Dr',3000,1800
+'Whitewater','1','9000 Scottsdale Rd',3500,1900
+'Terraces','8','1000 E.Apache',7000,3000
+
+@model(hID/char,mID/char,mName/char,sqft/numeric,story/char):mID,hID
+'1','01','Santa Fe',3000,'1'
+'1','02','Aurien',2500,'2'
+'1','03','Mansion',4000,'1'
+'2','01','Condo',3000,'2'
+'2','02','Brandywine',3500,'2'
+'3','01','Stonewell',5000,'1'
+'3','02','Shalimar',1500,'2'
+'4','04','Aurien I',2000,'1'
+'4','03','Aurien II',4000,'2'
+'5','01','Grandeur',2005,'1'
+'5','02','Rockwell',2005,'2'
+'6','01','Brickwell',4000,'2'
+'6','02','Pebblewell',1900,'1'
+'7','01','Dustwell',2000,'2'
+'7','02','Vacuumwell',2500,'2'
+
+@offered(sName/char,hID/char,mID/char,price/numeric):sName,hID,mID
+'Terraces','1','01',100000
+'Foothills','1','01',150000
+'Oceanside','1','01',110000
+'Terraces','1','02',200000
+'Foothills','1','02',50000
+'Oceanside','1','02',200500
+'Terraces','3','02',50000
+'Lagoonside','4','04',200000
+'Terraces','4','04',200000
+'Terraces','4','03',50000
+'Hillview','4','03',100000
+'Foothills','4','03',175000
+'Foothills','4','04',100000
+'Hillview','5','01',500000
+'Oceanside','3','01',200000
+'Lagoonside','6','01',300000
+'Seaside','6','02',250000
+'Hillview','2','02',275000
+'Hillview','6','02',20000
+'Goldwater','7','01',150000
+'Terraces','7','01',50000
+'Whitewater','7','02',1000000
+'Oceanside','1','03',300000
+'Foothills','1','03',400000
+'Hillview','1','01',500000
+'Hillview','1','02',600000
+'Hillview','1','03',300000
+'Waterside','4','03',200000
+
+@sold(sName/char,lotNum/char,hID/char,mID/char,status/char):sName,lotNum
+'Terraces','1','1','01','P'
+'Terraces','2','1','02','P'
+'Terraces','3','1','01','C'
+'Terraces','4','3','02','C'
+'Foothills','1','1','01','P'
+'Terraces','5','1','01','P'
+'Oceanside','1','3','01','C'
+'Lagoonside','1','6','01','C'
+'Seaside','1','7','01','P'
+'Waterside','1','7','02','C'
+
+@subdivision(sName/char,sCity/char,sZip/char):sName
+'Terraces','Tempe','85281'
+'Foothills','Phoenix','75281'
+'Oceanside','Glendale','86281'
+'Seaside','Tempe','85282'
+'Lagoonside','Phoenix','75282'
+'Waterside','Tempe','85281'
+'Mountainview','Phoenix','85613'
+'Hillview','Glendale','89281'
+'Goldwater','Tempe','89251'
+'Whitewater','Phoenix','79281'
+
